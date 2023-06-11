@@ -36,7 +36,7 @@ public class WishListRepositoryTest {
     }
 
     @Test
-    public void updateTest(){
+    public void updateTest(){ //SAVE에서 데이터가 이미 있을 경우
         var wishListEntity = create();
         var expected = wishListRepository.save(wishListEntity);
 
