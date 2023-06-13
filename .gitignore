@@ -45,5 +45,4 @@ out
 gen
 .gradle
 build
-
 application.yaml
