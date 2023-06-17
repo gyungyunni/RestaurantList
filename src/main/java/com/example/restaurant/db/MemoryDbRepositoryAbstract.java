@@ -41,17 +41,12 @@ abstract public class MemoryDbRepositoryAbstract<T extends MemoryDbEntity> imple
             return entity;
         }
     }
-
     @Override
     public void deleteById(int index) {
         var optionalEntity = db.stream().filter(it -> it.getIndex() == index).findFirst();
-        optionalEntity.ifPresent(db::remove);
-        /*
-         if(optionalEntity.isPresent()){ //데이터가 이미 있는 경우
+        if(optionalEntity.isPresent()){ //데이터가 이미 있는 경우
             db.remove(optionalEntity.get()); //remove라는 메서드를 통해 지우도록함
-         }
         }
-         */
     }
 
     //db를 바로 return 시키면 됨

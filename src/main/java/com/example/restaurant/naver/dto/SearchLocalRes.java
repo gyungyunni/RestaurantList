@@ -15,7 +15,7 @@ public class SearchLocalRes {
     private int total;
     private int start;
     private int display;
-    private List<SearchLocalItem> items; //items에 item이 list 형태로 들어있단 뜻
+    private List<SearchLocalItem> items;
 
 
     @Data
@@ -32,5 +32,4 @@ public class SearchLocalRes {
         private int mapx;
         private int mapy;
     }
-
 }

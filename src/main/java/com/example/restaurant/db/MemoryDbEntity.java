@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor //모든 필드 값을 파라미터로 받는 생성자 todtjd
 @Data
 public class MemoryDbEntity {
-    protected int index;
+    protected Integer index;
 }

@@ -4,6 +4,7 @@ import com.example.restaurant.naver.dto.SearchImageReq;
 import com.example.restaurant.naver.dto.SearchImageRes;
 import com.example.restaurant.naver.dto.SearchLocalReq;
 import com.example.restaurant.naver.dto.SearchLocalRes;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -29,12 +30,13 @@ public class NaverClient {
     @Value("${naver.url.search.image}")
     private String naverImageSearchUrl;
 
-    public SearchLocalRes searchLocal(SearchLocalReq searchLocalReq){
+    public SearchLocalRes searchLocal(SearchLocalReq searchLocalReq) {
         var uri = UriComponentsBuilder.fromUriString(naverLocalSearchUrl)
                 .queryParams(searchLocalReq.toMultiValueMap())
                 .build()
                 .encode()
                 .toUri();
+
 
         var headers = new HttpHeaders();
         headers.set("X-Naver-Client-Id", naverClientId);
