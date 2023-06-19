@@ -8,5 +8,5 @@ public interface MemoryDbRepositoryIfs<T> {
     Optional<T> findById(int index);
     T save(T entity); // 저장하는 save 메서드
     void deleteById(int index); //삭제하는 메서드
-    List<T> listAll(); //전체를 리턴시키는 메서드
+    List<T> findAll(); //전체를 리턴시키는 메서드
 }

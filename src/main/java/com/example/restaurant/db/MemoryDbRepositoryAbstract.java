@@ -51,7 +51,7 @@ abstract public class MemoryDbRepositoryAbstract<T extends MemoryDbEntity> imple
 
     //db를 바로 return 시키면 됨
     @Override
-    public List<T> listAll() {
+    public List<T> findAll() {
         return db;
     }
 }
